@@ -1,0 +1,68 @@
+\*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    width: 90%;
+    max-width: 1440px;
+    margin: 0 auto;
+
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.hidden {
+    overflow-y: hidden;
+
+}
+
+body {
+    line-height: 1.5;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+img,
+video {
+    max-width: 100%;
+    height: auto;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.title {
+    font-size: 60px;
+    font-weight: 800;
+}
+
+.sub-head {
+    font-size: 50px;
+    font-weight: 400;
+}
+
+.description {
+    font-size: 18px;
+    font-weight: normal;
+}

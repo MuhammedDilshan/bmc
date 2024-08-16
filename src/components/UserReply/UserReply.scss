@@ -1,0 +1,136 @@
+@import "../../styles/common.scss";
+.MessageContainer {
+  display: flex;
+  align-items: center;
+  position: relative !important;
+  animation: bounce 4s ease forwards infinite;
+  .avatar {
+    width: 250px;
+    img {
+      width: 100%;
+      display: block;
+    }
+  }
+  .reply {
+    background: linear-gradient(
+      to right,
+      $primary-color,
+      $primary-color-deep
+    ) !important;
+    color: #fff !important;
+    width: 100px !important;
+    font-size: 18px !important;
+    padding: 12px 20px !important;
+  }
+  .Message {
+    position: absolute;
+    top: 35%;
+    left: 180px;
+    transform: translateY(-50%);
+    background: #fff;
+    display: flex;
+    align-items: center;
+    padding: 6px 20px;
+    width: 220px;
+    color: #7a7a7a;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border-bottom-left-radius: 40px;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+
+    .right_container {
+      display: flex;
+      align-items: center;
+      .richIcon {
+        font-size: 16px;
+        color: $primary-color !important;
+      }
+      span {
+        height: 8px;
+        width: 140px;
+        margin: 0 8px;
+        display: block;
+        background: #f3f3f3;
+        border-radius: 2px;
+        &:after {
+          content: "";
+          display: block;
+          width: 50px;
+          background: #7a7a7a;
+          border-radius: 2px;
+          height: 8px;
+          animation: duration 12s ease-in-out infinite;
+        }
+        &.richColor {
+          &::after {
+            background: $primary-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+.GiftContainer {
+  position: relative !important;
+
+  .GiftBox {
+    background: #fff;
+    text-align: center;
+    padding: 20px 30px;
+    width: 180px;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+    img {
+      width: 35px;
+      margin: 0 auto;
+      display: block;
+    }
+    span {
+      font-size: 20px;
+      display: block;
+      margin-top: 14px;
+    }
+    button {
+      background: #f7f3fd;
+      padding: 12px 26px;
+      border-radius: 40px;
+      margin-top: 14px;
+      font-size: 16px;
+      color: $primary-color-deep;
+      transition: 0.3s ease-in;
+      &:hover {
+        background: $primary-color-deep;
+        color: #f7f3fd;
+      }
+    }
+  }
+  .avatar {
+    width: 250px;
+    position: absolute;
+    top: -50px;
+    left: 180px;
+  }
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(5px);
+  }
+  50% {
+    transform: translateY(15px);
+  }
+}
+@keyframes duration {
+  0%,
+  100% {
+    width: 40px;
+  }
+  50% {
+    width: 140px;
+  }
+}

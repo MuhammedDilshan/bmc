@@ -1,0 +1,38 @@
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/modal";
+@import "../../styles/common.scss";
+.modal-dialog {
+  width: 600px !important;
+}
+.modal-content {
+  background-color: #f8f9fa;
+  padding: 20px;
+  color: #333;
+  font-size: 1rem;
+  position: relative;
+  font-family: "poppins", "Helvetica Neue" !important;
+  .modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid $primary-border;
+    .header-left {
+      display: flex;
+      align-items: center;
+      .modal-title.h4 {
+        margin-right: 20px;
+        font-weight: 600;
+        font-size: 18px;
+      }
+    }
+    .custom-close-button {
+      font-size: 20px;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      color: #717171;
+    }
+  }
+}

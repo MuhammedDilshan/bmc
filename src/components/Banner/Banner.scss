@@ -1,0 +1,38 @@
+.blurredbg {
+  overflow-x: hidden;
+  span {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    display: block;
+    filter: blur(80px);
+    -webkit-filter: blur(80px);
+    z-index: -1;
+  }
+  .bg_one {
+    background: #e6f4cd;
+    bottom: -350px;
+    left: 90px;
+    @media (max-width: 640px) {
+      bottom: -100px;
+    }
+  }
+
+  .bg_two {
+    background: #c4b5d6;
+    bottom: -500px;
+    right: 50%;
+    transform: translateX(50%);
+    @media (max-width: 640px) {
+      bottom: -150px;
+    }
+  }
+  .bg_three {
+    background: #e6f4cd;
+    bottom: -330px;
+    right: -40px;
+    @media (max-width: 640px) {
+      bottom: -150px;
+    }
+  }
+}

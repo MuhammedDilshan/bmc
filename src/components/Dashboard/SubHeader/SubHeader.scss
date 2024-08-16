@@ -1,0 +1,160 @@
+@import "../../../styles/common.scss";
+
+.subHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 50px;
+  h4 {
+    font-size: 26px;
+  }
+  .buttonGroup {
+    display: flex;
+    gap: 20px;
+    button {
+      padding: 12px 24px;
+      border: 1px solid transparent;
+      border-radius: 40px;
+      display: flex;
+      align-items: center;
+      transition: 0.3s ease-in-out;
+      svg {
+        width: 15px;
+        height: 15px;
+        margin-right: 8px;
+      }
+      &.status_btn {
+        border: 1px solid #e1d6d6;
+      }
+      &.add_btn {
+        background: $primary-color;
+        color: #fff;
+        font-weight: 600;
+      }
+      &:hover {
+        background: $primary-color-deep;
+        color: #fff;
+      }
+    }
+  }
+}
+.form_item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  .right {
+    width: 70%;
+  }
+  label,
+  span {
+    font-weight: 600;
+    color: $primary-dark;
+  }
+  input,
+  select {
+    outline: none;
+    border: 1px solid #e3dfdf;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 16px 20px;
+    border-radius: 4px;
+    &:focus {
+      border: 1px solid $primary-dark;
+    }
+  }
+  &_error {
+    input {
+      border: 1px solid red;
+    }
+  }
+  .radio {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+
+    &_item {
+      display: flex;
+      margin-right: 40px;
+      label {
+        font-weight: 400;
+      }
+    }
+  }
+}
+.custom_radio {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.custom_label {
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+  display: inline-block;
+  color: #000;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 1px solid #e3dfdf;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 4px;
+    top: 4px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: $primary-color;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+  }
+}
+
+.custom_radio:checked + .custom_label {
+  &::before {
+    background-color: #fff;
+    border-color: $primary-color;
+  }
+
+  &::after {
+    opacity: 1;
+  }
+}
+.add_btn {
+  background: $primary-color;
+  color: #fff;
+  font-weight: 600;
+  padding: 12px 24px;
+  border: 1px solid transparent;
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  transition: 0.3s ease-in-out;
+
+  svg {
+    width: 15px;
+    height: 15px;
+    margin-right: 8px;
+  }
+  &:hover {
+    background-color: $primary-color-deep;
+  }
+}
+
+.error {
+  font-size: 12px !important;
+  color: red !important;
+  font-weight: normal !important;
+}

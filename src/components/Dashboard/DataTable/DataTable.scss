@@ -1,0 +1,131 @@
+@import "../../../styles/common.scss";
+
+.table_container {
+  margin: 10px 0 50px 0;
+  .table {
+    border-collapse: collapse;
+    border: 1px solid #e1d6d6;
+    width: 100%;
+    @media (max-width: 1100px) {
+      overflow: auto;
+    }
+  }
+
+  .th {
+    background: transparent;
+    text-align: left;
+    color: #717171;
+    font-weight: 400;
+    &_action {
+      text-align: right !important;
+    }
+  }
+  tr {
+    padding: 12px 20px;
+    transition: 0.3s ease-in-out;
+  }
+  .th,
+  .td {
+    border-bottom: 1px solid #e1d6d6;
+    padding: 20px 35px;
+    font-size: 14px;
+    .button_group {
+      display: flex;
+      align-items: center;
+      justify-content: end;
+      .edit {
+        background: $primary-border;
+        padding: 8px 20px;
+        border-radius: 50px;
+        font-size: 14px;
+        margin-right: 40px;
+        transition: 0.3s ease-in-out;
+        &:hover {
+          background: $primary-dark;
+          color: #fff;
+        }
+      }
+      .trash {
+        position: relative;
+        font-size: 18px;
+        color: #717171;
+        &:after {
+          content: "";
+          width: 30px;
+          height: 30px;
+          display: block;
+          background: $primary-dark;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%) scale(0);
+          z-index: -1;
+          border-radius: 50%;
+          transition: transform 0.3s ease;
+        }
+
+        &:hover {
+          color: #fff;
+          &:after {
+            transform: translate(-50%, -50%) scale(1.5);
+          }
+        }
+      }
+    }
+  }
+  .bottom {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    min-height: 46px;
+    transition: 0.3s ease-in-out;
+    .laodMore {
+      display: flex;
+      align-items: center;
+      background: #000;
+      background: $primary-border;
+      padding: 12px 24px;
+      border-radius: 50px;
+      font-size: 18px;
+      font-weight: 400;
+      transition: 0.3s ease-in-out;
+      svg {
+        margin-left: 10px;
+      }
+      &:hover {
+        background: $primary-dark;
+        color: #fff;
+      }
+    }
+  }
+}
+
+.shimmerWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.shimmer {
+  height: 20px;
+  width: 100%;
+  background: linear-gradient(to right, #f0f0f0 8%, #e0e0e0 18%, #f0f0f0 33%);
+  background-size: 1000px 100%;
+  animation: shimmer 2s infinite linear;
+}
+
+.shimmerLine {
+  height: 20px;
+  margin: 8px 0;
+  background-color: #e0e0e0;
+  border-radius: 4px;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}

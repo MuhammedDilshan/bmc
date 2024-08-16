@@ -1,0 +1,62 @@
+@import "../../styles/common.scss";
+.footer {
+  display: flex;
+  padding: 40px 80px;
+  @media (max-width: 640px) {
+    flex-direction: column;
+  }
+  .logo_box {
+    width: 150px;
+    margin-right: 170px;
+    img {
+      width: 100%;
+      display: block;
+    }
+  }
+  .footer_links {
+    .link_box {
+      display: flex;
+      gap: 150px;
+      flex-wrap: wrap;
+      @media (max-width: 1280px) {
+        gap: 80px;
+      }
+      .nav {
+        text-align: left;
+        h6 {
+          font-size: 16px;
+          font-weight: 600;
+          margin-bottom: 0;
+        }
+        ul {
+          padding-left: 0;
+          li {
+            margin-bottom: 12px;
+            color: $primary-dark;
+            :hover {
+              color: $primary-color;
+            }
+          }
+        }
+      }
+    }
+  }
+  .store {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-top: 40px;
+    a {
+      width: 120px;
+      transition: 0.3s ease-in-out;
+
+      &:hover {
+        transform: scale(1.03);
+      }
+    }
+  }
+  p {
+    font-size: 16px;
+    color: $primary-dark;
+  }
+}
