@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { FaPlay } from "react-icons/fa6";
 import { assets } from "../../assets/assets";
-import "./UserReply.scss"; // Updated import for Sass
+import "./UserReply.scss";
 
 const UserReply = ({ type, richColor, reply }) => {
   const [time, setTime] = useState(16);
@@ -29,9 +29,9 @@ const UserReply = ({ type, richColor, reply }) => {
   return (
     <>
       {type === "gift" ? (
-        <div className="giftContainer">
-          <div className="giftBox">
-            <div className="rightContainer">
+        <div className="gift-container">
+          <div className="gift-box">
+            <div className="right-container">
               <img src={assets.gift_icon} alt="Gift" />
               <span>
                 You received <br />a Gift
@@ -44,24 +44,26 @@ const UserReply = ({ type, richColor, reply }) => {
           </div>
         </div>
       ) : (
-        <div className="messageContainer">
+        <div className="message-container">
           <div className="avatar">
             <img src={assets?.green_memoji} alt="User" />
           </div>
           <div
             className={`message ${reply ? "reply" : ""} ${
-              richColor ? "richColor" : ""
+              richColor ? "rich-color" : ""
             }`}
           >
             {reply ? (
               <div>I am here!</div>
             ) : (
               <>
-                <div className="rightContainer">
-                  <small className={`richIcon ${richColor ? "richColor" : ""}`}>
+                <div className="right-container">
+                  <small
+                    className={`rich-icon ${richColor ? "rich-color" : ""}`}
+                  >
                     <FaPlay />
                   </small>
-                  <span className={richColor ? "richColor" : ""}></span>
+                  <span className={richColor ? "rich-color" : ""}></span>
                 </div>
                 <p>{formatTime(time)}</p>
               </>

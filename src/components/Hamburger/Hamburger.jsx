@@ -37,7 +37,7 @@ const Hamburger = () => {
       </div>
       <div className={`menu ${isActive ? "menuActive" : ""}`}>
         {window?.innerWidth <= 650 && (
-          <div className="header_left_container_search">
+          <div className="left_container_search">
             <IoSearch />
             <input type="text" placeholder="Search Creators" />
           </div>

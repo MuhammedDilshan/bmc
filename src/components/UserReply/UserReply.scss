@@ -1,28 +1,21 @@
 @import "../../styles/common.scss";
-.MessageContainer {
+
+.message-container {
   display: flex;
   align-items: center;
   position: relative !important;
   animation: bounce 4s ease forwards infinite;
+
   .avatar {
     width: 250px;
+
     img {
       width: 100%;
       display: block;
     }
   }
-  .reply {
-    background: linear-gradient(
-      to right,
-      $primary-color,
-      $primary-color-deep
-    ) !important;
-    color: #fff !important;
-    width: 100px !important;
-    font-size: 18px !important;
-    padding: 12px 20px !important;
-  }
-  .Message {
+
+  .message {
     position: absolute;
     top: 35%;
     left: 180px;
@@ -38,13 +31,15 @@
     border-top-right-radius: 40px;
     border-bottom-right-radius: 40px;
 
-    .right_container {
+    .right-container {
       display: flex;
       align-items: center;
-      .richIcon {
+
+      .rich-icon {
         font-size: 16px;
         color: $primary-color !important;
       }
+
       span {
         height: 8px;
         width: 140px;
@@ -52,6 +47,7 @@
         display: block;
         background: #f3f3f3;
         border-radius: 2px;
+
         &:after {
           content: "";
           display: block;
@@ -61,20 +57,33 @@
           height: 8px;
           animation: duration 12s ease-in-out infinite;
         }
-        &.richColor {
+
+        &.rich-color {
           &::after {
             background: $primary-color;
           }
         }
       }
     }
+
+    &.reply {
+      background: linear-gradient(
+        to right,
+        $primary-color,
+        $primary-color-deep
+      ) !important;
+      color: #fff !important;
+      width: 100px !important;
+      font-size: 18px !important;
+      padding: 12px 20px !important;
+    }
   }
 }
 
-.GiftContainer {
+.gift-container {
   position: relative !important;
 
-  .GiftBox {
+  .gift-box {
     background: #fff;
     text-align: center;
     padding: 20px 30px;
@@ -89,11 +98,13 @@
       margin: 0 auto;
       display: block;
     }
+
     span {
       font-size: 20px;
       display: block;
       margin-top: 14px;
     }
+
     button {
       background: #f7f3fd;
       padding: 12px 26px;
@@ -102,12 +113,14 @@
       font-size: 16px;
       color: $primary-color-deep;
       transition: 0.3s ease-in;
+
       &:hover {
         background: $primary-color-deep;
         color: #f7f3fd;
       }
     }
   }
+
   .avatar {
     width: 250px;
     position: absolute;
@@ -121,15 +134,18 @@
   100% {
     transform: translateY(5px);
   }
+
   50% {
     transform: translateY(15px);
   }
 }
+
 @keyframes duration {
   0%,
   100% {
     width: 40px;
   }
+
   50% {
     width: 140px;
   }

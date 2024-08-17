@@ -27,13 +27,13 @@ const Header = ({ admin }) => {
 
   return (
     <header className="header">
-      <div className="header-right-container">
-        <div className="header-right-container-logo">
+      <div className="right_container">
+        <div className="logo">
           <Link to="/">
             <img src={assets?.Logo} alt="Logo" />
           </Link>
         </div>
-        <ul className="header-right-container-nav">
+        <ul className="nav">
           {menu?.map((item, i) => (
             <li className="mx-2" key={i}>
               <Link to={item?.link}>{item?.name}</Link>
@@ -42,13 +42,13 @@ const Header = ({ admin }) => {
         </ul>
       </div>
       {!admin ? (
-        <div className="header-left-container">
-          <div className="header-left-container-search">
+        <div className="left-container">
+          <div className="search">
             <IoSearch />
             <input type="text" placeholder="Search Creators" />
           </div>
-          <button className="header-left-container-btn">Sign in</button>
-          <button className="header-left-container-btn-active">Sign Up</button>
+          <button className="btn">Sign in</button>
+          <button className="btn-active">Sign Up</button>
           <Hamburger />
         </div>
       ) : (
