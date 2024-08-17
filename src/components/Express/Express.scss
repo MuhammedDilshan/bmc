@@ -119,6 +119,9 @@
     right: -50px;
     position: absolute;
     top: 50px;
+    @media (max-width: 640px) {
+      right: 0;
+    }
   }
   .voiceMessage {
     position: absolute;
