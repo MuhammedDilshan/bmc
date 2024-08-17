@@ -63,5 +63,8 @@
     @media (max-width: 600px) {
       bottom: 16px;
     }
+    @media (max-width: 480px) {
+      display: none;
+    }
   }
 }

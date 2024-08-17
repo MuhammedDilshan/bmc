@@ -8,6 +8,9 @@
     filter: blur(80px);
     -webkit-filter: blur(80px);
     z-index: -1;
+    @media (max-width: 400px) {
+      width: 370px;
+    }
   }
   .bg_one {
     background: #e6f4cd;

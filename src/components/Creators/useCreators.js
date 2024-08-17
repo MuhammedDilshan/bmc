@@ -23,6 +23,7 @@ export const useCreators = () => {
       setIsLoading(false);
     } catch (error) {
       console.error("Error fetching users:", error);
+      setIsLoading(false);
     }
   }
   return { data, isLoading };

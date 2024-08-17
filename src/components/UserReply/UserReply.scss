@@ -30,6 +30,9 @@
     border-bottom-left-radius: 40px;
     border-top-right-radius: 40px;
     border-bottom-right-radius: 40px;
+    @media (max-width: 400px) {
+      top: 41%;
+    }
 
     .right-container {
       display: flex;

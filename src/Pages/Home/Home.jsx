@@ -40,9 +40,9 @@ const Home = () => {
   ];
   return (
     <>
-      {/* {isLoading ? (
+      {isLoading ? (
         <PreLoader />
-      ) : ( */}
+      ) : (
         <>
           <Spotlight />
           {ExpressSections?.map(({ heading, icon, description, type }) => (
@@ -57,7 +57,7 @@ const Home = () => {
           <Creators />
           <Footer />
         </>
-      {/* )} */}
+      )}
     </>
   );
 };
