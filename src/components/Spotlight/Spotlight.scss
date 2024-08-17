@@ -22,6 +22,9 @@
     @media (max-width: 980px) {
       width: 70%;
     }
+    @media (max-width: 600px) {
+      width: 100%;
+    }
 
     input {
       border: 1px solid $primary-border;

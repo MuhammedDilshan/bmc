@@ -96,3 +96,8 @@
     object-fit: cover;
   }
 }
+@media (max-width: 480px) {
+  .swiper {
+    width: 50%;
+  }
+}
